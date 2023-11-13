@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="image/png" href="{{url_for('static',filename='assets/images/Banner_Hit.png')}}">
+  <!--link rel="shortcut icon" type="image/ico" href="images/hit_fevicon.ico"-->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procurement Management System</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/annimate.css')}}">
+  <link href="{{url_for('static',filename='css/font-awesome.min.css')}}" type="text/css" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/SpryTabbedPanels.css')}}" type="text/css" rel="stylesheet">
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/bootstrap-dropdownhover.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style2.css')}}">
+  <script src="https://kit.fontawesome.com/872d074bc0.js" crossorigin="anonymous"></script>
+  {% block head %} {% endblock %}
+</head>
+
+<body>
+  <!-- Including the header of the page  -->
+  {% include header %}
+  <!-- <jsp:include page="loginHeader.jsp"></jsp:include> -->
+  {% include menu %}
+  <!-- <jsp:include page="menu.jsp"></jsp:include> -->
+
+  <div class="card clearfix hidden-sm hidden-xs" style="color:white;background-color: #00ADB5; margin-top:-15px; margin-bottom: 12px">
+    <marquee>Welcome to Procurement Management Site</marquee>
+  </div> <!--A green color line between header and body part-->
+
+  <div class="container-fluid">
+
+    <div class="notice">
+      <div class="col-md-3" style="margin-left:2%">
+        <!-- <% Connection con = DBUtil.provideConnection(); %> -->
+        {% include "notice.html" %}
+        <!-- <jsp:include page="notice.jsp"></jsp:include> -->
+        <br>
+
+        <!-- Next marquee starting-->
+        {% include "approved.html" %}
+        <!-- <jsp:include page="approved.jsp"></jsp:include> -->
+        <br>
+
+      </div> <!-- End of col-md-3-->
+    </div> <!-- End of notice class-->
+    {% block content %} {% endblock%}
+  </div> <!-- End of container-fluid-->
+
+
+  <!-- <div class="container" style="height:300px">
+	ucomment this if you want to add some space in the lower part of page
+	</div> -->
+  {% include "footer.html" %}
+  <!-- <jsp:include page="footer.jsp"></jsp:include> -->
+  <script src="{{url_for('static',filename='js/jquery-2.1.4.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/ajax-utils.js')}}"></script>
+  <script src="{{url_for('static',filename='js/script.js')}}"></script>
+  <script src="{{url_for('static',filename='js/bootstrap-dropdownhover.min.js')}}"></script>
+</body>
+
+</html>

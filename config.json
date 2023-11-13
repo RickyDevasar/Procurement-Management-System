@@ -1,0 +1,17 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql+mysqlconnector://root:@localhost/coding 360",
+        "prod_uri": "mysql+mysqlconnector://root:@server/coding 360",
+        "tw_url": "https://twitter.com",
+        "fb_url": "https://facebook.com",
+        "gh_url": "https://github.com ",
+        "blog_name": "The Coding Thunder",
+        "about_text": "I am a CSE student and a Programmer.Current in the 3rd year of my Graduation.",
+        "no_of_posts": 2,
+        "login_image": "login.svg",
+        "admin_user": "admin",
+        "admin_password": "admin",
+        "upload_location": "C:\\Users\\User\\Desktop\\Coding\\flask-tut\\static"
+    }
+}

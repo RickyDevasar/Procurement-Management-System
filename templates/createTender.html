@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+	input,
+	textarea,
+	select {
+		min-width: 450px;
+		font-size: 16px;
+		background-color: #f8f8f8;
+	}
+
+	input:hover,
+	textarea:hover,
+	select:hover {
+		min-width: 450px;
+		background-color: white;
+	}
+
+	table,
+	th,
+	td {
+		margin-bottom: 10px;
+		margin-left: 20%;
+		font-size: 20px;
+		border: 2px solid black;
+		text-align: center;
+		background-color: white;
+		color: #003399;
+	}
+
+	td {
+		padding: 12px;
+		background-color: none;
+	}
+
+	th {
+		padding: 12px;
+		background-color: #00ADB5;
+		color: white;
+		font-weight: bold;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Next part of same container-fluid in which gallery or other information will be shown-->
+
+<div class="col-md-8">
+	<!-- <div class="marquee" style="border:2px black hidden; background-color:white">
+        <h4 style="background-color:black; margin-top:-1.8px; margin-bottom:1px;padding: 5px; text-align: center;color:red;font-weight:bold">
+        &nbsp; <span id="pagetitle">Tender Creation</span></h4>pagetitle id is given here
+        <div  class="marquee-content" style="align:center; padding-top:5px;min-height:750px;background-color:#F0F0F0">
+      -->
+
+	<table style="border-radius:10px">
+		<tr>
+			<td id="show" style="min-width:632px;min-height:0px;color:blue"></td>
+		</tr>
+	</table>
+
+
+
+	<form action="/createTender" method="post">
+		<table style="background-color:white">
+			<th colspan="2">Add New Tendors</th>
+			<tr>
+				<td> Tender Name : </td>
+				<td><input type="text" name="tname" required="required"></td>
+			</tr>
+			<tr>
+				<td> Tender type : </td>
+				<td><select name="ttype" required="required">
+						<!-- <option value="none" selected disabled hidden> 
+          									Select an Option 
+     									 	</option>  -->
+						<option value="construction">Construction</option>
+						<option value="research">Research</option>
+						<option value="maintainence">Maintainence</option>
+						<option value="buisness">Buisness-implementation</option>
+						<option value="software">Software</option>
+						<option value="others">Others</option>
+
+					</select></td>
+			</tr>
+			<tr>
+				<td> Base Price :</td>
+				<td> <input type="number" name="tprice" required="required"></td>
+			</tr>
+			<tr>
+				<td> Strict Deadline :</td>
+				<td> <input type="date" name="tdeadline" required="required"></td>
+			</tr>
+			<tr>
+				<td> Location : </td>
+				<td> <input type="text" name="tloc" required="required"></td>
+			</tr>
+			<tr>
+				<td> Description : </td>
+				<td> <textarea rows="4" cols="40" style="font-size:15px" name="tdesc" required="required"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" text-align="center" value="Launch">
+				<button type="submit">Launch This Tender</button></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<!-- </div>
+     </div> -->
+</div>
+{% endblock %}
